@@ -10,43 +10,44 @@ body {
   color: #340043;
   font-size: 3rem;
   font-weight: 700;
-  margin: 30px 0 10px;
+  margin: 3rem 0 2rem;
   text-align: center;
   text-transform: uppercase;
 }
 
-button {
-  color: white;
-  border: 15px solid #340043;
-  border-radius: 50%;
-  padding: 8px;
-  transition: ease 1s;
+/* style.css */
+.card {
+  width: 200px; /* Largeur de la carte */
+  height: 150px; /* Hauteur de la carte */
+  border: 2px solid #340043;
+  border-radius: 10%;
+  margin: 10px;
+  display: inline-block; /* Utilisation de flexbox pour centrer le contenu */
+  overflow: hidden; /* Cache tout contenu qui dépasse de la carte */
+  /* Vos styles pour la carte ici */
+  background-size: cover; /* Ajuste la taille de l'image pour remplir la carte */
+  background-position: center; /* Centre l'image dans la carte */
+  color: #f8deff; /* Couleur du texte (assurez-vous que le texte est lisible sur l'image) */
+  text-shadow: -1px -1px 0 #340043,
+    /* Ombre supérieure gauche (ombre foncée) */ 1.5px -1.5px 0 #340043,
+    /* Ombre supérieure droite (ombre foncée) */ -1.5px 1.5px 0 #340043,
+    /* Ombre inférieure gauche (ombre foncée) */ 1.5px 1.5px 0 #340043; /* Ombre inférieure droite (ombre foncée) */
+  /* Réglez les valeurs des ombres pour l'espacement et l'épaisseur souhaités */
+}
+
+.card h2 {
   font-size: 30px;
-  position: relative;
-  background-color: transparent;
-  cursor: pointer;
-  width: 200px;
-  height: 200px;
-  margin-top: 70px;
-  font-weight: bold;
+  text-align: center;
+  vertical-align: center;
+  display: flex; /* Utilisation de flexbox pour centrer le contenu */
+  align-items: center; /* Centre le contenu verticalement */
+  justify-content: center; /* Centre le contenu horizontalement */
 }
 
-button:hover {
-  color: #340043;
-  background-color: black;
-  border: 15px solid #340043;
+.card p {
+  font-size: 14px;
 }
 
-.apprendre {
-  margin-right: 50px;
-}
-.jouer {
-  margin-left: 50px;
-}
-
-.page-apprendre {
-  display: block;
-}
-.page-jouer {
-  display: none;
+.carte-chat {
+  padding: 2rem;
 }
