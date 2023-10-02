@@ -5,9 +5,10 @@ $.ajax({
   success: function (result) {
     // Traitez la réponse ici, "result" contient les données
     const cardContainer = document.getElementById("cards");
+    const cardDetails = document.querySelector(".card-details");
 
     result.forEach((item, index) => {
-      const card = document.createElement("div");
+      const card = document.createElement("a");
       card.classList.add("card");
       card.classList.add("carte-chat");
 
@@ -42,7 +43,14 @@ $.ajax({
 
           card.innerHTML = `
                         <h2>${item.name}</h2>
+                        <ul class="text-card">
+                          <li><strong>Age : </strong>${item.life_span} ans</li>
+                          <li><strong>Origine : </strong> ${item.origin}</li>
+                        </ul>
                     `;
+
+          // Ajoutez l'attribut href
+          card.setAttribute("href", `carte-details.html?id=${item.id}`); // Remplacez "votre_lien_icI" par l'URL souhaitée
 
           //card.appendChild(img);
           cardContainer.appendChild(card);

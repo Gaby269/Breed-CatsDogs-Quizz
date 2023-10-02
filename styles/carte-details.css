@@ -1,0 +1,269 @@
+/* style.css */
+body {
+  display: block;
+  font-family: Arial, sans-serif;
+  background-color: #f8deff;
+  text-align: center;
+}
+
+.h1 {
+  color: #340043;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 3rem 0 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Centrer verticalement et horizontalement les images du carrousel */
+.carousel-item img {
+  display: block;
+  margin: 0 auto; /* Centre horizontalement */
+  max-height: 50%;
+  width: 100%; /* Largeur de la carte */
+  height: 100%; /* Hauteur de la carte */
+  align-items: center;
+  text-align: center;
+  position: middle;
+  border-radius: 10%;
+  padding: 2rem;
+}
+
+.carousel-container {
+  order: 1px solid black;
+  max-width: 200px;
+  max-height: 50px;
+  text-align: center;
+  margin: 10px auto 0;
+}
+/* Centrer le contenu du carrousel */
+#carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Assurez-vous que le conteneur occupe toute la hauteur disponible */
+  flex: 1; /* Le conteneur du carrousel prendra autant d'espace que possible */
+}
+.carousel-inner {
+  display: inline-block;
+}
+
+.card-details {
+  padding: 4rem;
+}
+
+.carte-total-description {
+  display: flex; /* Utilisation de flexbox pour aligner les éléments côte à côte */
+}
+
+#cards {
+  flex: 1; /* Le conteneur des détails de la carte prendra autant d'espace que possible */
+}
+
+.caracteristiques_grille {
+  padding: 1.5rem;
+  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #340043;
+}
+
+.caracteristiques_grille-item {
+  padding: 0.3125rem 0 0.3125rem 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.caracteristiques_grille-item > p {
+  font-size: 0.75rem;
+  color: white;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+.caracteristiques_grille-item > .caracteristiques_score_adap,
+.caracteristiques_grille-item > .caracteristiques_score_energy,
+.caracteristiques_grille-item > .caracteristiques_score_enf,
+.caracteristiques_grille-item > .caracteristiques_score_social,
+.caracteristiques_grille-item > .caracteristiques_score_perte,
+.caracteristiques_grille-item > .caracteristiques_score_toil,
+.caracteristiques_grille-item > .caracteristiques_score_sante,
+.caracteristiques_grille-item > .caracteristiques_score_etran,
+.caracteristiques_grille-item > .caracteristiques_score_affe,
+.caracteristiques_grille-item > .caracteristiques_score_dog,
+.caracteristiques_grille-item > .caracteristiques_score_intel,
+.caracteristiques_grille-item > .caracteristiques_score_voca {
+  padding: 0.5rem 0.5rem;
+}
+
+.caracteristiques_grille-item
+  > .caracteristiques_score_adap
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_energy
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_enf
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_social
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_perte
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_toil
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_sante
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_etran
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_affe
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_dog
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_intel
+  > .caracteristiques_dot.active,
+.caracteristiques_grille-item
+  > .caracteristiques_score_voca
+  > .caracteristiques_dot.active {
+  background-color: #db5bff;
+}
+
+.caracteristiques_grille-item
+  > .caracteristiques_score_adap
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_energy
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_enf
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_social
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_perte
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_toil
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_sante
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_etran
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_affe
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_dog
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_intel
+  > .caracteristiques_dot,
+.caracteristiques_grille-item
+  > .caracteristiques_score_voca
+  > .caracteristiques_dot {
+  background-color: #e2eced;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+*,
+::before,
+::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+@media (min-width: 1280px) {
+  .caracteristiques_grille {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 640px) {
+  .caracteristiques_grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
