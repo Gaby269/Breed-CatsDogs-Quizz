@@ -273,7 +273,9 @@ $.ajax({
       }
 
       cardItem.innerHTML = `
-                          <img src=${imageUrl.url} alt=Image ${index + 1}>
+            <img data-ax="lightbox" data-lightbox-caption="This is a caption" id="example-lightbox2" class="lightbox responsive-media" src=${
+              imageUrl.url
+            } alt=Image ${index + 1}>
                     `;
 
       carousel.appendChild(cardItem);
@@ -283,3 +285,6 @@ $.ajax({
     console.error("Error: ", jqXHR.responseText);
   },
 });
+
+// NOTE: this is NOT to be used if data-ax="lightbox" is set in your HTML
+let lightbox = new Axentix.Lightbox("#lightbox-details");

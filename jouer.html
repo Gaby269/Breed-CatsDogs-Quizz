@@ -3,6 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Incluez jQuery depuis un CDN -->
     <link rel="stylesheet" href="./styles/jouer.css" />
     <link rel="icon" href="assets/chat.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="assets/chat.ico" type="image/x-icon" />
@@ -10,12 +23,17 @@
     <title>Jouer</title>
   </head>
   <body>
-    <div class="page-accueil">
+    <div class="page-jouer">
       <div class="titre h1">Jouer</div>
+      <div class="page-jeu">
+        <div class="cote-gauche">
+          <h2>Coucou à gauche</h2>
+          <img src="./assets/chat.jpeg" alt="chat" />
+        </div>
+
+        <div class="cote-droit" id="cards"><h2>Coucou à droite</h2></div>
+      </div>
     </div>
-    <div class="page-apprendre">
-      <div class="card-mobile">Coucou c'est pour jouer</div>
-    </div>
-    <script src="script/accueil.js"></script>
+    <script src="script/jouer.js"></script>
   </body>
 </html>
