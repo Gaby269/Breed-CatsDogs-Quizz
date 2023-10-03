@@ -11,6 +11,12 @@ body {
 
 .h1 {
   color: #340043;
+  text-shadow: -1px -1px 0 #f8deff,
+    /* Ombre supérieure gauche (ombre foncée) */ 1.5px -1.5px 0 #f8deff,
+    /* Ombre supérieure droite (ombre foncée) */ -1.5px 1.5px 0 #f8deff,
+    /* Ombre inférieure gauche (ombre foncée) */ 1.5px 1.5px 0 #f8deff; /* Ombre inférieure droite (ombre foncée) */
+  /* Réglez les valeurs des ombres pour l'espacement et l'épaisseur souhaités */
+
   font-size: 3rem;
   font-weight: 700;
   margin: 30px 0 10px;
@@ -19,7 +25,13 @@ body {
 }
 
 button {
-  color: white;
+  color: #f8deff;
+  text-shadow: -1px -1px 0 #340043,
+    /* Ombre supérieure gauche (ombre foncée) */ 1.5px -1.5px 0 #340043,
+    /* Ombre supérieure droite (ombre foncée) */ -1.5px 1.5px 0 #340043,
+    /* Ombre inférieure gauche (ombre foncée) */ 1.5px 1.5px 0 #340043; /* Ombre inférieure droite (ombre foncée) */
+  /* Réglez les valeurs des ombres pour l'espacement et l'épaisseur souhaités */
+
   border: 15px solid #340043;
   border-radius: 50%;
   padding: 8px;
@@ -38,6 +50,7 @@ button:hover {
   color: #340043;
   background-color: #f8deff;
   border: 15px solid #340043;
+  text-shadow: none;
 }
 
 .apprendre {
