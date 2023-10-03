@@ -54,11 +54,12 @@ a {
 }
 
 .card-details {
-  padding: 4rem;
+  padding: 3rem;
 }
 
 .carte-total-description {
   display: flex; /* Utilisation de flexbox pour aligner les éléments côte à côte */
+  align-items: center; /* Centre verticalement les enfants */
 }
 
 #cards {
@@ -266,4 +267,28 @@ pre {
   .caracteristiques_grille {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.description,
+.temperament,
+.age,
+.race,
+.origin {
+  text-align: justify;
+  padding-bottom: 1rem;
+}
+.titre-description,
+.titre-age,
+.titre-temperatment,
+.titre-nom,
+.titre-origin {
+  font-size: 20px;
+}
+
+.age {
+  padding-bottom: 1.5rem;
+}
+
+.titre-origin {
+  display: inline-flex;
 }

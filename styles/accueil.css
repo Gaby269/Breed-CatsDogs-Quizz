@@ -4,13 +4,13 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8deff;
   text-align: center;
-  background-image: url("../assets/chat.jpg");
+  background-image: url("../assets/chat.jpeg");
   background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la zone */
   background-repeat: no-repeat; /* Évite la répétition de l'image */
 }
 
 .h1 {
-  color: #c06c13;
+  color: #340043;
   font-size: 3rem;
   font-weight: 700;
   margin: 30px 0 10px;
@@ -20,7 +20,7 @@ body {
 
 button {
   color: white;
-  border: 15px solid #c06c13;
+  border: 15px solid #340043;
   border-radius: 50%;
   padding: 8px;
   transition: ease 1s;
@@ -35,9 +35,9 @@ button {
 }
 
 button:hover {
-  color: #c06c13;
-  background-color: black;
-  border: 15px solid #c06c13;
+  color: #340043;
+  background-color: #f8deff;
+  border: 15px solid #340043;
 }
 
 .apprendre {

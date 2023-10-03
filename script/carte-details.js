@@ -22,12 +22,73 @@ $.ajax({
     result.forEach((item, index) => {
       if (item.id == cardId) {
         i = index;
+        console.log(i, result[i].name, result[i].origin);
       }
     });
+    var origine = result[i].origin;
     // TITRE DE LA PAGE
     document.title = `Details sur ${result[i].name}`;
     var elementTitre = document.querySelector(".titre"); // Sélectionnez l'élément avec la classe "titre"
     elementTitre.textContent = `Details sur ${result[i].name}`; // Modifiez le contenu de l'élément
+
+    // RACE
+    var race_chat = document.querySelector(".race");
+    if (race_chat) {
+      var race = document.createElement("p");
+      race.classList.add("texte-race");
+      race.textContent = result[i].name;
+      race_chat.appendChild(race);
+    } else {
+      console.error("L'élément avec la classe 'nrace' n'a pas été trouvé.");
+    }
+
+    // ORIGIN
+    var origin = document.querySelector(".origin");
+    if (origin) {
+      // DRAPEAU
+      $.ajax({
+        method: "GET",
+        url: "https://restcountries.com/v3.1/all",
+        contentType: "application/json",
+        success: function (resultDrapeau) {
+          //console.log(resultDrapeau);
+
+          var i2 = 0;
+          resultDrapeau.forEach((item, index) => {
+            if (origine == item.name.common) {
+              i2 = index;
+              console.log(origine, item.name.common);
+            }
+          });
+          var flag = document.createElement("p");
+          flag.classList.add("flag-origin");
+          flag.textContent =
+            resultDrapeau[i2].flag +
+            "  " +
+            resultDrapeau[i2].translations.fra.common;
+          origin.appendChild(flag);
+        },
+
+        error: function ajaxError(jqXHR) {
+          console.error("Error: ", jqXHR.responseText);
+        },
+      });
+    } else {
+      console.error("L'élément avec la classe 'norigin' n'a pas été trouvé.");
+    }
+
+    // TEMPERAMENT
+    var temperament = document.querySelector(".temperament");
+    if (temperament) {
+      var temp = document.createElement("p");
+      temp.classList.add("texte-temperament");
+      temp.textContent = result[i].temperament;
+      temperament.appendChild(temp);
+    } else {
+      console.error(
+        "L'élément avec la classe 'temperament' n'a pas été trouvé."
+      );
+    }
 
     // DESCRITPTION
     // Assurez-vous que l'élément avec la classe "description" existe avant de le sélectionner
@@ -35,6 +96,7 @@ $.ajax({
     if (description) {
       // Créez l'élément <p> et attribuez-lui le contenu de "item.description"
       var desc = document.createElement("p");
+      desc.classList.add("texte-description");
       desc.textContent = result[i].description; // Utilisation de textContent pour éviter l'injection de code potentiellement dangereux
       // Ajoutez l'élément <p> au conteneur "description"
       description.appendChild(desc);
@@ -42,6 +104,16 @@ $.ajax({
       console.error(
         "L'élément avec la classe 'description' n'a pas été trouvé."
       );
+    }
+
+    // AGE
+    var age = document.querySelector(".age");
+    if (age) {
+      var a = document.createElement("p");
+      a.textContent = result[i].life_span + " ans";
+      age.appendChild(a);
+    } else {
+      console.error("L'élément avec la classe 'age' n'a pas été trouvé.");
     }
 
     // CARACTERISTIQUES
