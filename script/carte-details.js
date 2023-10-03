@@ -273,7 +273,7 @@ $.ajax({
       }
 
       cardItem.innerHTML = `
-            <img data-ax="lightbox" data-lightbox-caption="This is a caption" id="example-lightbox2" class="lightbox responsive-media" src=${
+            <img data-ax="lightbox" data-lightbox-caption="This is a caption" id="lightbox-details" class="lightbox responsive-media" src=${
               imageUrl.url
             } alt=Image ${index + 1}>
                     `;
