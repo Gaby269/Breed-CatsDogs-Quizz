@@ -26,29 +26,29 @@
     <div class="page-jouer">
       <div class="titre h1 question">
         Qui est de la race
-
-        <span class="gras souligne"></span> ?
+        <span class="race-chat gras souligne"></span> ?
       </div>
       <div class="card-container">
-        <div class="card choix" data-vote="1">
-          <img class="card-img" src="assets/chat.jpg" alt="chat" />
-          <img class="card-img-wide" src="assets/chat.jpeg" alt="chat" />
-        </div>
+        <div
+          class="card choix premier"
+          data-vote="1"
+          onclick="validate()"
+        ></div>
         <div class="div-scores">
           <div class="score">
             <span class="nb-score-bon">0</span>😸
             <span class="nb-score-mauvais">0</span>😾
           </div>
-          <div class="best">Record💪 : <span class="nb-best">0</span></div>
+          <div class="record">Record💪 : <span class="nb-best">0</span></div>
         </div>
 
-        <div class="card choix" data-vote="2">
-          <img class="card-img" src="assets/chat.jpeg" alt="chat" />
-
-          <img class="card-img-wide" src="assets/chat.jpeg" alt="chat" />
-        </div>
+        <div
+          class="card choix deuxieme"
+          data-vote="2"
+          onclick="validate()"
+        ></div>
       </div>
     </div>
-    <script src="script/jouer.js"></script>
+    <script src="./script/jouer.js"></script>
   </body>
 </html>

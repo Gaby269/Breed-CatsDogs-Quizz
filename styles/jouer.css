@@ -71,10 +71,6 @@ a {
 .card-img {
   width: 100%;
   border-radius: calc(0.25rem - 1px);
-}
-
-.card-img {
-  width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
@@ -84,33 +80,6 @@ a {
   text-align: left;
   color: white;
   overflow: hidden;
-}
-
-.card-artist {
-  display: block;
-  margin: 10px 0;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.card-song {
-  display: none;
-  margin: 10px 0;
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-.card-followers {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.card-info {
-  text-align: left;
-  color: white;
 }
 
 .div-scores {
@@ -144,13 +113,8 @@ a {
   font-weight: 700;
 }
 
-.best {
+.record {
   margin: 10px;
-  font-weight: 0;
-  font-size: 1.2rem;
-}
-
-.best {
   font-weight: 0;
   font-size: 1.2rem;
 }
@@ -164,4 +128,17 @@ a {
 }
 .nb-score-mauvais {
   color: red;
+}
+
+.premier,
+.deuxieme {
+  transform: perspective(1000px) rotateY(0deg) translateX(0);
+}
+
+.premier:hover {
+  transform: perspective(1000px) rotateY(10deg) translateX(20px);
+}
+
+.deuxieme:hover {
+  transform: perspective(1000px) rotateY(-10deg) translateX(-20px);
 }
