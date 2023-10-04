@@ -24,14 +24,29 @@
   </head>
   <body>
     <div class="page-jouer">
-      <div class="titre h1">Jouer</div>
-      <div class="page-jeu">
-        <div class="cote-gauche">
-          <h2>Coucou à gauche</h2>
-          <img src="./assets/chat.jpeg" alt="chat" />
+      <div class="titre h1 question">
+        Qui est de la race
+
+        <span class="gras souligne"></span> ?
+      </div>
+      <div class="card-container">
+        <div class="card choix" data-vote="1">
+          <img class="card-img" src="assets/chat.jpg" alt="chat" />
+          <img class="card-img-wide" src="assets/chat.jpeg" alt="chat" />
+        </div>
+        <div class="div-scores">
+          <div class="score">
+            <span class="nb-score-bon">0</span>😸
+            <span class="nb-score-mauvais">0</span>😾
+          </div>
+          <div class="best">Record💪 : <span class="nb-best">0</span></div>
         </div>
 
-        <div class="cote-droit" id="cards"><h2>Coucou à droite</h2></div>
+        <div class="card choix" data-vote="2">
+          <img class="card-img" src="assets/chat.jpeg" alt="chat" />
+
+          <img class="card-img-wide" src="assets/chat.jpeg" alt="chat" />
+        </div>
       </div>
     </div>
     <script src="script/jouer.js"></script>

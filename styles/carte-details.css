@@ -19,38 +19,21 @@ a {
   text-decoration: none;
 }
 
-/* Centrer verticalement et horizontalement les images du carrousel */
-.carousel-item img {
-  display: block;
-  margin: 0 auto; /* Centre horizontalement */
-  max-height: 50%;
-  width: 100%; /* Largeur de la carte */
-  height: 100%; /* Hauteur de la carte */
-  align-items: center;
-  text-align: center;
-  position: middle;
-  border-radius: 10%;
-  padding: 2rem;
-}
-
-.carousel-container {
+.caroulix {
   order: 1px solid black;
-  max-width: 200px;
-  max-height: 50px;
+  max-width: 700px;
+  max-height: 100px;
   text-align: center;
   margin: 10px auto 0;
 }
 /* Centrer le contenu du carrousel */
-#carousel-container {
+#caroulix-chat {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%; /* Assurez-vous que le conteneur occupe toute la hauteur disponible */
   flex: 1; /* Le conteneur du carrousel prendra autant d'espace que possible */
-}
-.carousel-inner {
-  display: inline-block;
 }
 
 .card-details {

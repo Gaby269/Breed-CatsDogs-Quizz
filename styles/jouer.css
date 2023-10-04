@@ -46,3 +46,122 @@ a {
 #cards {
   flex: 1; /*autant de place que cote gauche*/
 }
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 1300px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.card {
+  width: 350px;
+  height: 350px;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #340043;
+  box-shadow: -2vmin 2vmin 3vmin rgba(0, 0, 0, 0.4);
+  transition: transform 400ms ease;
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: calc(0.25rem - 1px);
+}
+
+.card-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 10px 20px;
+  text-align: left;
+  color: white;
+  overflow: hidden;
+}
+
+.card-artist {
+  display: block;
+  margin: 10px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card-song {
+  display: none;
+  margin: 10px 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.card-followers {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card-info {
+  text-align: left;
+  color: white;
+}
+
+.div-scores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 10px;
+  font-size: 4rem;
+  font-weight: 700;
+  transition: transform 0.2s ease-out;
+}
+
+.score {
+  flex-direction: row;
+}
+
+.question {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 20px;
+  cursor: help;
+}
+
+.souligne {
+  text-decoration: underline;
+}
+
+.gras {
+  font-weight: 700;
+}
+
+.best {
+  margin: 10px;
+  font-weight: 0;
+  font-size: 1.2rem;
+}
+
+.best {
+  font-weight: 0;
+  font-size: 1.2rem;
+}
+
+.card-img-wide {
+  display: none;
+}
+
+.nb-score-bon {
+  color: green;
+}
+.nb-score-mauvais {
+  color: red;
+}

@@ -15,15 +15,17 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="script/carte-details.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axentix@2.4.0/dist/axentix.min.js"></script>
     <!-- Incluez jQuery depuis un CDN -->
     <link rel="stylesheet" href="./styles/carte-details.css" />
-    <link rel="icon" href="assets/chat.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="assets/chat.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/axentix@2.4.0/dist/axentix.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/axentix@2.4.0/dist/axentix.min.js"></script>
+    <!--icon-->
+    <link rel="icon" href="assets/chat.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/chat.ico" type="image/x-icon" />
 
     <title></title>
   </head>
@@ -31,8 +33,25 @@
     <div class="page-details">
       <div class="titre h1"></div>
       <div class="carte-total-description">
-        <div id="carousel-container">
-          <div id="carousel" class="carousel slide" data-ride="carousel"></div>
+        <div
+          class="caroulix"
+          id="caroulix-chat"
+          data-ax="caroulix"
+          data-caroulix-autoplay-enabled="true"
+          data-caroulix-indicators-enabled="true"
+        >
+          <div class="caroulix-arrow caroulix-prev">
+            <span
+              class="iconify-inline font-s5"
+              data-icon="mdi:chevron-left"
+            ></span>
+          </div>
+          <div class="caroulix-arrow caroulix-next">
+            <span
+              class="iconify-inline font-s5"
+              data-icon="mdi:chevron-right"
+            ></span>
+          </div>
         </div>
 
         <div class="card-details" id="cards">
@@ -105,6 +124,5 @@
         </div>
       </div>
     </div>
-    <script src="script/carte-details.js"></script>
   </body>
 </html>

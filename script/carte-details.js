@@ -257,34 +257,25 @@ $.ajax({
 // Utilisez l'URL correcte pour récupérer les images par race
 $.ajax({
   method: "GET",
-  url: `https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${cardId}&api_key=REPLACE_ME`, // Remplacez REPLACE_ME par votre clé API
+  url: `https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${cardId}&api_key=REPLACE_ME`,
   contentType: "application/json",
   success: function (result) {
     // Récupérez le conteneur du carrousel
-    var carousel = document.querySelector(".carousel");
+    var carousel = document.querySelector("#caroulix-chat");
 
     result.forEach(function (imageUrl, index) {
-      var cardItem = document.createElement("div");
-      cardItem.classList.add("carousel-item");
+      // Créez un élément pour chaque image
+      var caroulixItem = document.createElement("div");
+      caroulixItem.classList.add("caroulix-item");
+      caroulixItem.innerHTML = `
+        <img src=${imageUrl.url} alt="Image chat">
+      `;
 
-      // Marquez la première image comme active
-      if (index === 0) {
-        cardItem.classList.add("active");
-      }
-
-      cardItem.innerHTML = `
-            <img data-ax="lightbox" data-lightbox-caption="This is a caption" id="lightbox-details" class="lightbox responsive-media" src=${
-              imageUrl.url
-            } alt=Image ${index + 1}>
-                    `;
-
-      carousel.appendChild(cardItem);
+      // Ajoutez l'élément au carrousel
+      carousel.appendChild(caroulixItem);
     });
   },
   error: function ajaxError(jqXHR) {
     console.error("Error: ", jqXHR.responseText);
   },
 });
-
-// NOTE: this is NOT to be used if data-ax="lightbox" is set in your HTML
-let lightbox = new Axentix.Lightbox("#lightbox-details");
