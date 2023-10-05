@@ -164,7 +164,7 @@ a {
   color: #f8deff;
   background-color: #340043;
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 1rem;
   margin-top: 10px;
   margin-right: 20px;
 }
@@ -174,7 +174,19 @@ a {
   color: #f8deff;
   background-color: #340043;
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 1rem;
   margin-top: 10px;
   margin-left: 20px;
+}
+
+.accueil {
+  color: #f8deff;
+  background-color: #340043;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.bouton-accueil {
+  padding: 2rem;
 }
