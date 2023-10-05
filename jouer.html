@@ -32,20 +32,26 @@
         <div
           class="card choix premier"
           data-vote="1"
-          onclick="validate()"
+          onclick="validatePremier()"
+          data-disabled="false"
         ></div>
         <div class="div-scores">
           <div class="score">
             <span class="nb-score-bon">0</span>😸
             <span class="nb-score-mauvais">0</span>😾
           </div>
-          <div class="record">Record💪 : <span class="nb-best">0</span></div>
+          <div class="record">D'affilé💪 : <span class="nb-best">0</span></div>
+          <div class="indication">Bravo</div>
+          <button class="suivantQuestion" id="suivant-question">
+            Suivant !
+          </button>
         </div>
 
         <div
           class="card choix deuxieme"
           data-vote="2"
-          onclick="validate()"
+          onclick="validateDeuxieme()"
+          data-disabled="false"
         ></div>
       </div>
     </div>

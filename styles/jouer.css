@@ -142,3 +142,19 @@ a {
 .deuxieme:hover {
   transform: perspective(1000px) rotateY(-10deg) translateX(-20px);
 }
+
+.suivantQuestion {
+  font-size: 50%;
+  color: #f8deff;
+  background-color: #340043;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: none;
+  margin-top: 10px;
+}
+
+.indication {
+  font-size: 50%;
+  margin-top: 10px;
+  display: none;
+}
