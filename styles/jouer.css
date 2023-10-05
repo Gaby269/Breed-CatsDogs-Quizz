@@ -158,3 +158,23 @@ a {
   margin-top: 10px;
   display: none;
 }
+
+.reload {
+  font-size: 100%;
+  color: #f8deff;
+  background-color: #340043;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.recommencer {
+  font-size: 100%;
+  color: #f8deff;
+  background-color: #340043;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 10px;
+  margin-left: 20px;
+}

@@ -332,3 +332,69 @@ document.addEventListener("keydown", function (event) {
     buttonSuivant.click();
   }
 });
+
+//RELOAD
+// Ajoutez un gestionnaire d'événements au bouton "Nouvelles cartes"
+var buttonReload = document.getElementById("reload-chat");
+buttonReload.addEventListener("click", function () {
+  // on doit rechercher deux race
+  chercher2Race();
+
+  // remettre les deux card à la possibilité d'appuyer dessus
+  var premierCard = document.querySelector(".premier");
+  var deuxiemeCard = document.querySelector(".deuxieme");
+  premierCard.setAttribute("data-disabled", "false");
+  deuxiemeCard.setAttribute("data-disabled", "false");
+
+  // bouton il doit redisparaitre
+  buttonSuivant.style.display = "none";
+
+  // retoru des card à la normal sans contour
+  premierCard.style.border = "none";
+  deuxiemeCard.style.border = "none";
+  //var cardBeforeElement1 = window.getComputedStyle(premierCard, "::before");
+  premierCard.style.content = "none";
+  //var cardBeforeElement2 = window.getComputedStyle(deuxiemeCard, "::before");
+  deuxiemeCard.style.content = "none"; // Pour masquer le contenu de l'élément ::before
+
+  // rendre l'indication non visible
+  var indiq = document.querySelector(".indication");
+  indiq.style.display = "none";
+});
+
+//RECOMMENCER
+// Ajoutez un gestionnaire d'événements au bouton "Nouvelles cartes"
+var buttonRecommencer = document.getElementById("recommencer-chat");
+buttonRecommencer.addEventListener("click", function () {
+  // on doit rechercher deux race
+  chercher2Race();
+
+  // remettre les deux card à la possibilité d'appuyer dessus
+  var premierCard = document.querySelector(".premier");
+  var deuxiemeCard = document.querySelector(".deuxieme");
+  premierCard.setAttribute("data-disabled", "false");
+  deuxiemeCard.setAttribute("data-disabled", "false");
+
+  // bouton il doit redisparaitre
+  buttonSuivant.style.display = "none";
+
+  // retoru des card à la normal sans contour
+  premierCard.style.border = "none";
+  deuxiemeCard.style.border = "none";
+  //var cardBeforeElement1 = window.getComputedStyle(premierCard, "::before");
+  premierCard.style.content = "none";
+  //var cardBeforeElement2 = window.getComputedStyle(deuxiemeCard, "::before");
+  deuxiemeCard.style.content = "none"; // Pour masquer le contenu de l'élément ::before
+
+  // rendre l'indication non visible
+  var indiq = document.querySelector(".indication");
+  indiq.style.display = "none";
+
+  //POINT A 0
+  var bonScore = document.querySelector(".nb-score-bon");
+  bonScore.textContent = "0";
+  var nulScore = document.querySelector(".nb-score-mauvais");
+  nulScore.textContent = "0";
+  var bestScore = document.querySelector(".nb-best");
+  bestScore.textContent = "0";
+});
