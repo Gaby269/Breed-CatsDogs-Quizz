@@ -261,18 +261,17 @@ $.ajax({
   contentType: "application/json",
   success: function (result) {
     // Récupérez le conteneur du carrousel
-    var carousel = document.querySelector("#caroulix-chat");
+    var affichage = document.querySelector("#affichage-chat-detail");
 
     result.forEach(function (imageUrl, index) {
       // Créez un élément pour chaque image
-      var caroulixItem = document.createElement("div");
-      caroulixItem.classList.add("caroulix-item");
-      caroulixItem.innerHTML = `
-        <img src=${imageUrl.url} alt="Image chat">
-      `;
+      var affichageItem = document.createElement("img");
+      affichageItem.src = imageUrl.url;
+      affichageItem.alt = "Image chat";
+      affichageItem.style = "width:300px; height:auto;";
 
       // Ajoutez l'élément au carrousel
-      carousel.appendChild(caroulixItem);
+      affichage.appendChild(affichageItem);
     });
   },
   error: function ajaxError(jqXHR) {

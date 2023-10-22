@@ -10,6 +10,10 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <script
       src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
@@ -26,7 +30,13 @@
     <!--icon-->
     <link rel="icon" href="assets/chat.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="assets/chat.ico" type="image/x-icon" />
-
+    <!-- Axentix CSS minified version -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/axentix@2.4.0/dist/axentix.min.css"
+    />
+    <!-- Axentix JS minified version -->
+    <script src="https://cdn.jsdelivr.net/npm/axentix@2.4.0/dist/axentix.min.js"></script>
     <title></title>
   </head>
   <body>
@@ -34,78 +44,10 @@
       <div class="titre h1"></div>
       <div class="carte-total-description">
         <div
-          class="caroulix"
-          id="caroulix-chat"
-          data-ax="caroulix"
-          data-caroulix-autoplay-enabled="true"
-          data-caroulix-indicators-enabled="true"
-        >
-          <div class="caroulix-arrow caroulix-prev">
-            <span
-              class="iconify-inline font-s5"
-              data-icon="mdi:chevron-left"
-            ></span>
-          </div>
-          <div class="caroulix-arrow caroulix-next">
-            <span
-              class="iconify-inline font-s5"
-              data-icon="mdi:chevron-right"
-            ></span>
-          </div>
-        </div>
-        <div id="carouselExampleIndicators" class="carousel slide">
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="..." class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="..." />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+          class="affichage-photo"
+          style="width: 50%; padding: 1.2rem"
+          id="affichage-chat-detail"
+        ></div>
 
         <div class="card-details" id="cards">
           <div class="race">
