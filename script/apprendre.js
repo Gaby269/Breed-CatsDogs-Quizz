@@ -15,7 +15,7 @@ $.ajax({
       // Utilisez l'URL correcte pour récupérer les images par race
       $.ajax({
         method: "GET",
-        url: `https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${item.id}&api_key=REPLACE_ME`, // Remplacez REPLACE_ME par votre clé API
+        url: `https://api.thedogapi.com/v1/images/search?limit=10&breed_ids=${item.id}&api_key=REPLACE_ME`, // Remplacez REPLACE_ME par votre clé API
         contentType: "application/json",
         success: function (result2) {
           // Nombre aléatoire pour avoir l'id d'une photo différente à chaque fois
