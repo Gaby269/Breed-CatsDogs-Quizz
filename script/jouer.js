@@ -21,7 +21,7 @@ function chercher2Race() {
 
   $.ajax({
     method: "GET",
-    url: "https://api.thecatapi.com/v1/breeds",
+    url: "https://api.thedogapi.com/v1/breeds",
     contentType: "application/json",
     success: function (resultRace) {
       //TROUVER LE NOM D'UN CHAT AU HASARD
@@ -45,7 +45,7 @@ function chercher2Race() {
       //TROUVER UNE PHOTO ASSOCIE AU VRAI
       $.ajax({
         method: "GET",
-        url: `https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${raceIdVrai}&api_key=REPLACE_ME`,
+        url: `https://api.thedogapi.com/v1/images/search?limit=10&breed_ids=${raceIdVrai}&api_key=REPLACE_ME`,
         contentType: "application/json",
         success: function (resultImage) {
           var tailleResult = resultImage.length;
@@ -72,7 +72,7 @@ function chercher2Race() {
       //TROUVER UNE PHOTO ASSOCIE AU FAUX
       $.ajax({
         method: "GET",
-        url: `https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${raceIdFaux}&api_key=REPLACE_ME`,
+        url: `https://api.thedogapi.com/v1/images/search?limit=10&breed_ids=${raceIdFaux}&api_key=REPLACE_ME`,
         contentType: "application/json",
         success: function (resultImage) {
           var tailleResult = resultImage.length;
