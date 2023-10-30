@@ -15,7 +15,7 @@ var cardId = getParameterByName("id");
 // Utilisez l'URL correcte pour récupérer les images par race
 $.ajax({
   method: "GET",
-  url: "https://api.thedogapi.com/v1/breeds",
+  url: "https://api.thecatapi.com/v1/breeds",
   contentType: "application/json",
   success: function (result) {
     var i = 0;
@@ -257,7 +257,7 @@ $.ajax({
 // Utilisez l'URL correcte pour récupérer les images par race
 $.ajax({
   method: "GET",
-  url: `https://api.thedogapi.com/v1/images/search?limit=10&breed_ids=${cardId}&api_key=REPLACE_ME`,
+  url: `https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${cardId}&api_key=REPLACE_ME`,
   contentType: "application/json",
   success: function (result) {
     // Récupérez le conteneur du carrousel

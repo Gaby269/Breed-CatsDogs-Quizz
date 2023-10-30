@@ -4,7 +4,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8deff;
   text-align: center;
-  background-image: url("../assets/chat.jpeg");
+  background-image: url("../assets/catsDogs.jpg");
   background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la zone */
   background-repeat: no-repeat; /* Évite la répétition de l'image */
 }
@@ -65,4 +65,10 @@ button:hover {
 }
 .page-jouer {
   display: none;
+}
+
+.colonne {
+  width: 50%;
+  height: 100%;
+  float: left;
 }

@@ -251,7 +251,7 @@ pre {
   }
 }
 
-.description,
+.eleve-pour,
 .temperament,
 .age,
 .race,
@@ -259,7 +259,7 @@ pre {
   text-align: justify;
   padding-bottom: 1rem;
 }
-.titre-description,
+.titre-elevage,
 .titre-age,
 .titre-temperatment,
 .titre-nom,

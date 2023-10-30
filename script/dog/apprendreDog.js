@@ -1,6 +1,6 @@
 $.ajax({
   method: "GET",
-  url: "https://api.thecatapi.com/v1/breeds",
+  url: "https://api.thedogapi.com/v1/breeds",
   contentType: "application/json",
   success: function (result) {
     // Traitez la réponse ici, "result" contient les données
@@ -8,6 +8,7 @@ $.ajax({
     const cardDetails = document.querySelector(".card-details");
 
     result.forEach((item, index) => {
+      console.log(item.id);
       const card = document.createElement("a");
       card.classList.add("card");
       card.classList.add("carte-chat");
@@ -21,7 +22,7 @@ $.ajax({
           // Nombre aléatoire pour avoir l'id d'une photo différente à chaque fois
           const randomIndex = Math.floor(Math.random() * result2.length); // Génère un nb aléatoire
           const item2 = result2[randomIndex]; // Sélectionne une image aléatoire
-
+          console.log(item2);
           // Créez l'élément <img> avec des styles CSS pour la taille
           const img = document.createElement("img");
           img.src = item2.url;
@@ -42,15 +43,15 @@ $.ajax({
           card.style.backgroundImage = `url('${item2.url}')`;
 
           card.innerHTML = `
-                        <h2>${item.name}</h2>
-                        <ul class="text-card">
-                          <li><strong>Age : </strong>${item.life_span} ans</li>
-                          <li><strong>Origine : </strong> ${item.origin}</li>
-                        </ul>
-                    `;
+                          <h2>${item.name}</h2>
+                          <ul class="text-card">
+                            <li><strong>Age : </strong>${item.life_span}</li>
+                            <li><strong>Origine : </strong> ${item.origin}</li>
+                          </ul>
+                      `;
 
           // Ajoutez l'attribut href
-          card.setAttribute("href", `carte-details.html?id=${item.id}`); // Remplacez "votre_lien_icI" par l'URL souhaitée
+          card.setAttribute("href", `carte-detailsDog.html?id=${item.id}`); // Remplacez "votre_lien_icI" par l'URL souhaitée
 
           //card.appendChild(img);
           cardContainer.appendChild(card);

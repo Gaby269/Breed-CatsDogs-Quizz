@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Incluez jQuery depuis un CDN -->
+    <link rel="stylesheet" href="./styles/jouer.css" />
+    <link rel="icon" href="assets/chat.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/chat.ico" type="image/x-icon" />
+
+    <title>Jouer</title>
+  </head>
+  <body>
+    <div class="page-jouer">
+      <div class="titre h1 question">
+        Qui est de la race
+        <span class="race-chat gras souligne"></span> ?
+      </div>
+      <div class="card-container">
+        <div
+          class="card choix premier"
+          data-vote="1"
+          onclick="validatePremier()"
+          data-disabled="false"
+        ></div>
+        <div class="div-scores">
+          <div class="score">
+            <span class="nb-score-bon">0</span>👍
+            <br />
+            <span class="nb-score-mauvais">0</span>👎
+          </div>
+          <div class="record">D'affilée💪 : <span class="nb-best">0</span></div>
+          <div class="indication">Bravo</div>
+          <button class="suivantQuestion" id="suivant-question">
+            Suivant !
+          </button>
+        </div>
+
+        <div
+          class="card choix deuxieme"
+          data-vote="2"
+          onclick="validateDeuxieme()"
+          data-disabled="false"
+        ></div>
+      </div>
+
+      <button class="reload" id="reload-chat">Recharger !</button>
+      <button class="recommencer" id="recommencer-chat">Recommencer !</button>
+    </div>
+    <div class="bouton-accueil">
+      <a class="accueil" id="accueil" href="index.html"> Accueil ! </a>
+    </div>
+    <script src="./script/cat/jouerCat.js"></script>
+  </body>
+</html>

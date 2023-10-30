@@ -11,19 +11,38 @@
   </head>
   <body>
     <div class="page-accueil">
-      <div class="titre h1">CatsQuizz</div>
+      <div class="colonne col-md-6">
+        <!-- Contenu de la première colonne -->
+        <div class="titre h1">CatsQuizz</div>
 
-      <button
-        class="apprendre"
-        id="but-apprendre"
-        onclick="afficherApprendre()"
-      >
-        Apprendre
-      </button>
-      <button class="jouer" id="but-jouer" onclick="afficherJouer()">
-        Jouer
-      </button>
+        <button
+          class="apprendre"
+          id="but-apprendre"
+          onclick="afficherApprendreCat()"
+        >
+          Apprendre
+        </button>
+        <button class="jouer" id="but-jouer" onclick="afficherJouerCat()">
+          Jouer
+        </button>
+      </div>
+      <div class="colonne col-md-6">
+        <!-- Contenu de la première colonne -->
+        <div class="titre h1">DogsQuizz</div>
+
+        <button
+          class="apprendre"
+          id="but-apprendre"
+          onclick="afficherApprendreDog()"
+        >
+          Apprendre
+        </button>
+        <button class="jouer" id="but-jouer" onclick="afficherJouerDog()">
+          Jouer
+        </button>
+      </div>
     </div>
+
     <script src="./script/accueil.js"></script>
   </body>
 </html>
